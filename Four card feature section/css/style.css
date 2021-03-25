@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 15px;
+	font-family: Poppins, sans-serif;
+	color: #555555;
+}
+
+.container {
+	margin: 0 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+	.container {
+		margin: 0 auto;
+	}
+}
+
+.hero {
+	text-align: center;
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+
+.hero__header {
+	margin-bottom: 1em;
+	font-size: 1.5rem;
+	line-height: 1.7;
+}
+
+.hero__header--light {
+	font-weight: 200;
+}
+
+.hero__body {
+	opacity: 0.6;
+}
+
+@media only screen and (min-width: 500px) {
+	.hero {
+		margin: 5em auto;
+		max-width: 65%;
+	}
+
+	.hero__header {
+		font-size: 1.6rem;
+		margin-bottom: 1em;
+		line-height: 1.5;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.hero {
+		max-width: 40%;
+	}
+
+	.hero__header {
+		font-size: 2rem;
+		margin-bottom: 0.5em;
+		line-height: 1.5;
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	.hero {
+		max-width: 35%;
+	}
+
+	.hero__header {
+		font-size: 2.2rem;
+		margin-bottom: 0.5em;
+		line-height: 1.5;
+	}
+
+	.hero__body {
+		margin: 0 auto;
+		max-width: 80%;
+	}
+}
+
+.cards {
+	margin-bottom: 5em;
+}
+
+.card {
+	padding: 1.5em;
+	border-top: 3px solid black;
+	border-radius: 5px;
+	box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 2em;
+}
+
+.card__header {
+	font-size: 1.25rem;
+}
+
+.card__body {
+	font-size: 0.8rem;
+	line-height: 2;
+	opacity: 0.6;
+	margin-bottom: 3em;
+}
+
+.card__image {
+	display: block;
+	margin-left: auto;
+}
+
+.card--red {
+	border-color: #ea5353;
+}
+
+.card--cyan {
+	border-color: #45d3d3;
+}
+
+.card--orange {
+	border-color: #fcaf4a;
+}
+
+.card--blue {
+	border-color: #549ef2;
+}
+
+@media only screen and (min-width: 500px) {
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2em;
+	}
+
+	.card {
+		margin: 0;
+	}
+
+	.card__header {
+		margin-bottom: 0.3em;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.cards {
+		max-width: 80%;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: '. red .'
+ 'cyan red blue'
+ 'cyan orange blue'
+ '. orange .';
+	}
+
+	.card--red {
+		grid-area: red;
+	}
+
+	.card--cyan {
+		grid-area: cyan;
+	}
+
+	.card--orange {
+		grid-area: orange;
+	}
+
+	.card--blue {
+		grid-area: blue;
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	.cards {
+		max-width: 70%;
+	}
+}
